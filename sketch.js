@@ -17,27 +17,27 @@ function draw() {
   
 }
 
-// ___________
-// ___Classes_______
-// ___________
+// _____
+// __Classes__
+// _____
 
 
-// ___Random walek_____
+// __Random walek__
 
 class RandomWalek {
   constructor(_name) {
-    this.red = random(0, 255);
+    this.red = random(100, 100);
     this.green = random(0, 200);
-    this.blue = random(0, 150);
+    this.blue = random(100, 200);
 
     this.t=0;
-    this.tSpeed =random(0.5);
-    this.noiseShift = random(1000);
+    this.tSpeed =random(0.1);
+    this.noiseShift = random(10);
 
-    this.pos = createVector(width / 2, height / 2);
-    this.speed = createVector(random(-2, 2), random(-2, 2));
-    this.diametro = random(5, 50);
-    print('Hola! soy la pelota' + this.name);
+    this.pos = createVector(width /-1, height / 5);
+    this.speed = createVector(random(20,10), random(60,20));
+    this.diametro = random(10, 30);
+    print('Hola! soy particulas cu te' + this.name);
   }
 
   update(_t) {
@@ -48,11 +48,11 @@ class RandomWalek {
   }
 
   display() {
-    noStroke ("rgba(0,0,0,.2");
-    strokeWeight(3)
+    noStroke ("rgba(1,0,0,1");
+    strokeWeight(1)
     fill(this.red, this.green, this.blue);
     ellipse(this.pos.x, this.pos.y, this.diametro, this.diametro);
-    line (this.pos.x, this.pos.y)
+   
 
   }
 }
